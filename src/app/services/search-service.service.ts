@@ -19,8 +19,10 @@ export class SearchService {
   // private instance variable to hold base url
   // private HotelsAPIUrl = 'http://132.148.134.86:3000/api/'; // Change
   // private HotelsDbUrl = 'http://132.148.134.86:3000/Hotels/'; // Change
+
   private HotelsAPIUrl = 'https://api.halaljourney.com/api/'; // Change
-  private HotelsDbUrl = 'https://api.halaljourney.com/Hotels/'; // Change
+  // private HotelsDbUrl = 'https://api.halaljourney.com/Hotels/'; // Change
+  private HotelsDbUrl = 'http://localhost:3000/Hotels/'; // Change
   
   getHotelsByCityIdFromDb(CountryCode: string, City: string, Page: number) : Observable<Hotel[]> {
     return this.http.get(this.HotelsDbUrl + CountryCode + "/" + City + "/" + Page)

@@ -40,13 +40,13 @@
 
         <div class="space60"></div>
 
-        <div class="halal-star-rating-left">
-          <h6>Halal Star Rating {{City}} </h6>
+        <div class="star-rating-left">
+          <h6>halal star rating</h6>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="one-halal" class="css-checkbox" type="checkbox" (click)="getArray(5)">
-              <label for="one-halal" name="demo_lbl_1_halal" class="css-label"></label>
+              <input id="halalstar5" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Halal_Star_Click(5)">
+              <label for="halalstar5" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -55,10 +55,10 @@
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="two-halal" class="css-checkbox" type="checkbox">
-              <label for="two-halal" name="demo_lbl_1_halal" class="css-label"></label>
+              <input id="halalstar4" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Halal_Star_Click(4)">
+              <label for="halalstar4"  class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -66,20 +66,20 @@
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="three-halal" class="css-checkbox" type="checkbox">
-              <label for="three-halal" name="demo_lbl_1_halal" class="css-label"></label>
+              <input id="halalstar3" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Halal_Star_Click(3)">
+              <label for="halalstar3" name="demo_lbl_1" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="four-halal" class="css-checkbox" type="checkbox">
-              <label for="four-halal" name="demo_lbl_1_halal" class="css-label"></label>
+              <input id="halalstar2" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Halal_Star_Click(2)">
+              <label for="halalstar2" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -88,6 +88,7 @@
           
         </div>
 
+        
         <div class="space60"></div>
 
         <div class="star-rating-left">
