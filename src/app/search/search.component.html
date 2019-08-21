@@ -41,12 +41,12 @@
         <div class="space60"></div>
 
         <div class="halal-star-rating-left">
-          <h6>Halal Star Rating</h6>
+          <h6>Halal Star Rating {{City}} </h6>
 
           <div class="rating-row">
             <div class="custom-checkbox">
-              <input id="one" class="css-checkbox" type="checkbox">
-              <label for="one" name="demo_lbl_1" class="css-label"></label>
+              <input id="one-halal" class="css-checkbox" type="checkbox" (click)="getArray(5)">
+              <label for="one-halal" name="demo_lbl_1_halal" class="css-label"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -57,8 +57,8 @@
 
           <div class="rating-row">
             <div class="custom-checkbox">
-              <input id="two" class="css-checkbox" type="checkbox">
-              <label for="two" name="demo_lbl_1" class="css-label"></label>
+              <input id="two-halal" class="css-checkbox" type="checkbox">
+              <label for="two-halal" name="demo_lbl_1_halal" class="css-label"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -68,8 +68,8 @@
 
           <div class="rating-row">
             <div class="custom-checkbox">
-              <input id="three" class="css-checkbox" type="checkbox">
-              <label for="three" name="demo_lbl_1" class="css-label"></label>
+              <input id="three-halal" class="css-checkbox" type="checkbox">
+              <label for="three-halal" name="demo_lbl_1_halal" class="css-label"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -78,8 +78,8 @@
 
           <div class="rating-row">
             <div class="custom-checkbox">
-              <input id="four" class="css-checkbox" type="checkbox">
-              <label for="four" name="demo_lbl_1" class="css-label"></label>
+              <input id="four-halal" class="css-checkbox" type="checkbox">
+              <label for="four-halal" name="demo_lbl_1_halal" class="css-label"></label>
             </div>
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
             <img src="../assets/images/search-form/halal-rating-star.png" alt="">
@@ -88,13 +88,15 @@
           
         </div>
 
+        <div class="space60"></div>
+
         <div class="star-rating-left">
           <h6>star rating</h6>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="one" class="css-checkbox" type="checkbox">
-              <label for="one" name="demo_lbl_1" class="css-label"></label>
+              <input id="star5" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Star_Click(5)">
+              <label for="star5" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/rating-star.png" alt="">
             <img src="../assets/images/search-form/rating-star.png" alt="">
@@ -103,10 +105,10 @@
             <img src="../assets/images/search-form/rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="two" class="css-checkbox" type="checkbox">
-              <label for="two" name="demo_lbl_1" class="css-label"></label>
+              <input id="star4" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Star_Click(4)">
+              <label for="star4"  class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/rating-star.png" alt="">
             <img src="../assets/images/search-form/rating-star.png" alt="">
@@ -114,29 +116,29 @@
             <img src="../assets/images/search-form/rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="three" class="css-checkbox" type="checkbox">
-              <label for="three" name="demo_lbl_1" class="css-label"></label>
+              <input id="star3" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Star_Click(3)">
+              <label for="star3" name="demo_lbl_1" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/rating-star.png" alt="">
             <img src="../assets/images/search-form/rating-star.png" alt="">
             <img src="../assets/images/search-form/rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="four" class="css-checkbox" type="checkbox">
-              <label for="four" name="demo_lbl_1" class="css-label"></label>
+              <input id="star2" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Star_Click(2)">
+              <label for="star2" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/rating-star.png" alt="">
             <img src="../assets/images/search-form/rating-star.png" alt="">
           </div>
 
-          <div class="rating-row">
+          <div class="rating-row-radio">
             <div class="custom-checkbox">
-              <input id="five" class="css-checkbox" type="checkbox">
-              <label for="five" name="demo_lbl_1" class="css-label"></label>
+              <input id="star1" name="demo_lbl_1" class="css-radio" type="radio" (click)="Search_Star_Click(1)">
+              <label for="star1" class="css-labelradio"></label>
             </div>
             <img src="../assets/images/search-form/rating-star.png" alt="">
           </div>

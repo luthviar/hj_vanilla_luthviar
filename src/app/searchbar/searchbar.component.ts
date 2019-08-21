@@ -14,7 +14,7 @@ export class SearchbarComponent implements OnInit {
   SearchValue: string;
   CheckInDate: string;
   CheckOutDate: string;
-  NumOfAdults: number;
+  NumOfAdults: number = 1;
   NumOfChildren: number = 0;
   Child1Age: number;
   Child2Age: number;

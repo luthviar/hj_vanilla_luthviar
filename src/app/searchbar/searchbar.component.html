@@ -10,7 +10,7 @@
         <div class="frmSearch">
           <!-- <input type="text" name="countryName" [(ngModel)]="SearchValue" value="" placeholder="Enter a destination" class="search" autocomplete="off"> -->
           <ng2-completer name="countryName" value="" placeholder="Enter a destination" [(ngModel)]="SearchValue" [datasource]="dataService" 
-          [minSearchLength]="2" [openOnClick]="true" [textSearching]="" [maxChars]="4"></ng2-completer>
+          [minSearchLength]="2" [openOnClick]="true" [textSearching]="" [maxChars]="6"></ng2-completer>
         </div>
       </div>
 
@@ -43,6 +43,7 @@
       <div class="search-bar-cell">
         <label>Kids</label>
         <select class="kids" [(ngModel)]="NumOfChildren" name="kids">
+              <option value="0" >00</option>
               <option value="1" >01</option>
               <option value="2" >02</option>
               <option value="3" >03</option>
@@ -50,7 +51,7 @@
           </select>
       </div>
 
-      <div class="search-bar-cell">
+      <!-- <div class="search-bar-cell">
         <label>Rooms</label>
         <select class="Rooms" name="Rooms">
               <option value="1" >01</option>
@@ -58,7 +59,7 @@
               <option value="3" >03</option>
               <option value="4" >04</option>
           </select>
-      </div>
+      </div> -->
       <input (click)="Search_Click()" type="submit" name="submitForm" value="search now"> <br /> <br />
       <!-- <div class="search-bar-cell">
         <label>Hotel Name</label>

@@ -27,6 +27,18 @@ export class SearchService {
       .map((res:Response) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
+  getHotelsByCityIdStarFromDb(CountryCode: string, City: string, Page: number, Star: number) : Observable<Hotel[]> {
+    return this.http.get(this.HotelsDbUrl + CountryCode + "/" + City + "/" + Star + "/" + Page)
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
+  }
+
+  getHotelsByCityIdStarHalalFromDb(CountryCode: string, City: string, Page: number, Star: number) : Observable<Hotel[]> {
+    return this.http.get(this.HotelsDbUrl + 'halal/' + CountryCode + "/" + City + "/" + Star + "/" + Page)
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
+  }
+
   getHotelsByCityIdFromApi(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) : Observable<Hotel> {
     return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page + "/" + CheckInDate + "/" + CheckOutDate + "/" + NumOfAdults + "/" + NumOfChildren)
       .map((res:Response) => res.json())

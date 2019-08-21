@@ -33,6 +33,8 @@ export class SearchComponent implements OnInit {
   PrevPageNo: number;
   hotels: Hotel[];
   isBusy: boolean;
+  countClick: number = 0;
+  stars: Array<number>;
   
   ngOnInit() {
     // subscribe to router event
@@ -74,6 +76,40 @@ export class SearchComponent implements OnInit {
       });
   }
 
+  public Search_Star_Click(Star: number) {
+    window.scrollTo(0, 500);
+    // const inputStar = document.getElementById('star' + Star) as HTMLInputElement;
+    
+    // this.stars.push(Star);
+    // this.countClick++;
+    // // alert(this.countClick);
+    // if (this.countClick === 2) {
+    //   alert(this.countClick);
+    //   inputStar.checked = false;
+    //   this.countClick = 1;
+    //   return;
+    // }
+    // document.getElementById('star'+Star).checked = false;
+    // CountryCode: this.CountryCode, 
+    // City: this.City, Page: this.Page, CheckInDate: this.CheckInDate, 
+    // CheckOutDate: this.CheckOutDate, NumOfAdults: this.NumOfAdults, NumOfChildren: this.NumOfChildren
+    this.isBusy = true;
+    // alert(Star);
+    this.hotels = null;
+    this._searchService.getHotelsByCityIdStarFromDb(this.CountryCode, this.City, 1, Star)
+      .subscribe(hotels => {
+        this.isBusy = false;
+        //console.log(hotels);
+        // this.NextPageNo += 1;
+        // this.PrevPageNo -= 1;
+        this.hotels = hotels;
+      },
+      err => {
+        this.isBusy = false;
+        console.log(err);
+      });
+  }
+
   public NextPage(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
     this.Search_Click(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren);
   }
@@ -88,6 +124,10 @@ export class SearchComponent implements OnInit {
 
   private getArray(StarRating) {
     return Array(parseInt(StarRating.toString())).fill(0).map((x, i) => i);
+  }
+
+  public getClickRes(param) {
+    alert('param' + param);
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model
